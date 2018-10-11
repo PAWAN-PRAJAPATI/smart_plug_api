@@ -32,5 +32,8 @@ app.get('/off',(req,res,next)=>{
 app.get('/status',(req,res,next)=>{
     plug.findOne({_id:status_id},(result)=>{res.send(result)},req,res,next)
 })
-var port = 5000
+var port = process.env.PORT || 
+
+
+5001
 app.listen(port , () => console.log('Example app listening on port ' + port))
